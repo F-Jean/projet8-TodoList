@@ -35,18 +35,18 @@ class TaskRepository extends ServiceEntityRepository
             ->setMaxResults($length);
 
         $paginator = new Paginator($queryBuilder);
-        // On va chercher les données
+        // On va chercher les données.
         $data = $paginator->getQuery()->getResult();
 
-        // On vérifie qu'on a des données
+        // On vérifie qu'on a des données.
         if (empty($data)) {
             return $result;
         }
 
-        // On calcule le nombre de pages
+        // On calcule le nombre de pages.
         $pages = ceil($paginator->count() / $length);
 
-        // On remplit le tableau des infos requises pour faire la pagination dans la vue
+        // On remplit le tableau des infos requises pour faire la pagination dans la vue.
         $result['data'] = $data;
         $result['pages'] = $pages;
         $result['page'] = $page;
@@ -68,18 +68,18 @@ class TaskRepository extends ServiceEntityRepository
             ->setMaxResults($length);
 
         $paginator = new Paginator($queryBuilder);
-        // On va chercher les données
+        // On va chercher les données.
         $data = $paginator->getQuery()->getResult();
 
-        // On vérifie qu'on a des données
+        // On vérifie qu'on a des données.
         if (empty($data)) {
             return $result;
         }
 
-        // On calcule le nombre de pages
+        // On calcule le nombre de pages.
         $pages = ceil($paginator->count() / $length);
 
-        // On remplit le tableau des infos requises pour faire la pagination dans la vue
+        // On remplit le tableau des infos requises pour faire la pagination dans la vue.
         $result['data'] = $data;
         $result['pages'] = $pages;
         $result['page'] = $page;

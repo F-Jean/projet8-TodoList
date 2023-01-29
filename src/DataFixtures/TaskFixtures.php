@@ -65,7 +65,7 @@ class TaskFixtures extends Fixture implements DependentFixtureInterface
         $manager->flush();
     }
 
-    // Return an array of the fixture classes that must be loaded before this one, here UserFixtures
+    // Return an array of the fixture classes that must be loaded before this one, here UserFixtures.
     /**
      * @return array<int, string>
      */

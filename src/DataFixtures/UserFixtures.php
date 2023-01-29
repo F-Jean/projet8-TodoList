@@ -31,7 +31,7 @@ class UserFixtures extends Fixture
      */
     private function createUsers(ObjectManager $manager): array
     {
-        // Création de plusieurs users pour tester l'authentification et les fonctionnalités
+        // Création de plusieurs users pour tester l'authentification et les fonctionnalités.
         $users =
             [
                 // Donne le role ROLE_ADMIN (pour avoir accès aux infos user)
@@ -62,7 +62,7 @@ class UserFixtures extends Fixture
      */
     public function load(ObjectManager $manager): void
     {
-        // Ajout de 3 users utilisés dans TaskFixtures pour les tests
+        // Ajout de 3 users utilisés dans TaskFixtures pour les tests.
         $userAdmin = new User;
         $userAdmin->setUsername('Audrey')
             ->setEmail('audrey@sf.com')

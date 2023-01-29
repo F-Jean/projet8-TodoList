@@ -15,7 +15,7 @@ use App\Service\UserDataInterface;
 
 /**
  * UserController class
- * 
+ *
  * Require ROLE_ADMIN for all the actions of this controller
  */
 #[IsGranted('ROLE_ADMIN')]

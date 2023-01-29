@@ -35,12 +35,12 @@ class TaskVoter extends Voter
         string $attribute,
         mixed $subject
     ): bool {
-        // If the attribute isn't one we support, return false
+        // If the attribute isn't one we support, return false.
         if (!in_array($attribute, [self::AUTHORIZE])) {
             return false;
         }
 
-        // Only vote on `Task` objects
+        // Only vote on `Task` objects.
         if (!$subject instanceof Task) {
             return false; // @codeCoverageIgnore
         }
@@ -62,11 +62,11 @@ class TaskVoter extends Voter
         $user = $token->getUser();
 
         if (!$user instanceof User) {
-            // The user must be logged in; if not, deny access
+            // The user must be logged in; if not, deny access.
             return false; // @codeCoverageIgnore
         }
 
-        // You know $subject is a Task object, thanks to `supports()`
+        // You know $subject is a Task object, thanks to `supports()`.
         /** @var Task $task */
         $task = $subject;
 

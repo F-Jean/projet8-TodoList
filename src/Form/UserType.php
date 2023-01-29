@@ -18,7 +18,7 @@ class UserType extends AbstractType
         $builder
             ->add('username', TextType::class, [
                 'label' => "Nom d'utilisateur",
-                /* ajout de empty_data pour test le blank pour l'edit
+                /* Ajout de empty_data pour test le blank pour l'edit
                 (et ne pas avoir l'erreur de sf) */
                 'empty_data' => '',
             ])
