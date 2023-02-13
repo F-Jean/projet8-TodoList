@@ -22,7 +22,7 @@ Une tâche doit être attachée à un utilisateur :
 
 -   lors de la création ;
 -   auteur non modifiable lors d'une modification ;
--   auteur "anonyme" pour tâches dékà existantes.
+-   auteur "anonyme" pour tâches déjà existantes.
 
 Rôle des utilisateur :
 
@@ -39,11 +39,6 @@ Rôle des utilisateur :
 
 -   doivent être implémentés avec PHPUnit ;
 -   prévoir des données de tests ;
--   fournir un rapport de couverture de code :
-
-```
-lien à venir
-```
 
 ### Documentation technique
 
@@ -58,18 +53,10 @@ qualité à utiliser ainsi que les règles à respecter.
 
 ### Audit de qualité du code & performance de l'application
 
-Produire un audit de code sur les deux axes suivants (avant & après modifications):
-
--   la qualité du code à l'aide de Codacy :
+Audit de code sur les deux axes suivants (avant & après modifications):
 
 ```
-lien à venir
-```
-
--   la performance à l'aide d'un outils de profiling comme Blackfire :
-
-```
-lien à venir
+cf. documentation
 ```
 
 ## Installation
@@ -111,7 +98,7 @@ php bin/console doctrine:fixtures:load
 ## Démarer le serveur et aller sur le site
 
 ```
-symfony server:start -d
+symfony serve -d
 https://127.0.0.1:8000
 ```
 
@@ -123,7 +110,8 @@ Créer un fichier `.env.test.local` :
 DATABASE_URL=mysql://root:password@127.0.0.1/todolist_v1_test
 ```
 
-Créer la base de données, installer les fixtures et mettre à jour la base de données de test :
+Créer la base de données, installer les fixtures et mettre à jour la base de
+données de test :
 
 ```
 composer database-test
@@ -131,14 +119,40 @@ composer database-test
 
 ### Lancer les tests
 
-phpstan :
+phpstan : analyseur statique pour PHP (identifie les erreures sans avoir
+besoin d'exécuter le code).
 
 ```
 vendor/bin/phpstan analyse -c phpstan.neon
 ```
 
-phpunit :
+phpunit : permet de tester les tests de régression implémentés en vérifiant que
+les exécutions correspondent aux assertions prédéfinies.
 
 ```
 php bin/phpunit
+```
+
+php code sniffer : détecte les violations définies par le standard PSR-12.
+
+```
+vendor/bin/phpcs --standard=PSR12 src
+```
+
+php code standards fixer : corrige le code pour suivre les standards PSR.
+
+```
+tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+```
+
+php mess detector : scan le code source PHP à la recherche de potentiel erreures
+telles que :
+
+-   de possibles bugs ;
+-   du code mort ;
+-   code mal optimisé ;
+-   expressions trop compliqués.
+
+```
+vendor/bin/phpmd src text .phpmd.xml
 ```

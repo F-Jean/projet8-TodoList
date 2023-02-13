@@ -63,20 +63,20 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         // Ajout de 3 users utilisés dans TaskFixtures pour les tests.
-        $userAdmin = new User;
+        $userAdmin = new User();
         $userAdmin->setUsername('Audrey')
             ->setEmail('audrey@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userAdmin, 'passworD1!'))
             ->setRole('ROLE_ADMIN');
         $manager->persist($userAdmin);
 
-        $userTest1 = new User;
+        $userTest1 = new User();
         $userTest1->setUsername('Morgane')
             ->setEmail('morgane@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userTest1, 'passworD1!'));
         $manager->persist($userTest1);
 
-        $userTest2 = new User;
+        $userTest2 = new User();
         $userTest2->setUsername('Clement')
             ->setEmail('clement@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userTest2, 'passworD1!'));

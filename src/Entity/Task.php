@@ -53,9 +53,6 @@ class Task
         return $this->id;
     }
 
-    /**
-     * @return DateTime
-     */
     public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;

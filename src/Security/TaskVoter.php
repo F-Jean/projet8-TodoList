@@ -6,14 +6,14 @@ use App\Entity\Task;
 use App\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Bundle\SecurityBundle\Security;
 
 /**
  * TaskVoter class
  */
 class TaskVoter extends Voter
 {
-    const AUTHORIZE = 'authorize';
+    private const AUTHORIZE = 'authorize';
     private Security $security;
 
     /**
