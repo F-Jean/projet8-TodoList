@@ -27,7 +27,7 @@ Une tâche doit être attachée à un utilisateur :
 Rôle des utilisateur :
 
 -   choix entre ROLE_USER & ROLE_ADMIN lors de la création d'un utilisateur ;
--   role modifiable lors de la modification.
+-   rôle modifiable lors de la modification.
 
 ### Implémentation de nouvelles fonctionnalités
 
@@ -37,7 +37,7 @@ Rôle des utilisateur :
 
 ### Implémentation de tests automatisés
 
--   doivent être implémentés avec PHPUnit ;
+-   implémentés avec PHPUnit ;
 -   prévoir des données de tests ;
 
 ### Documentation technique
@@ -47,7 +47,9 @@ Rôle des utilisateur :
 -   comment s'opère l'authentification ;
 -   où sont stockés les utilisateurs.
 
-Ajouter aussi un document expliquant comment doivent procéder les développeurs
+### CONTRIBUTING.md
+
+Document expliquant comment doivent procéder les développeurs
 souhaitant apporter des modifications au projet et détailler le processus de
 qualité à utiliser ainsi que les règles à respecter.
 
@@ -56,7 +58,7 @@ qualité à utiliser ainsi que les règles à respecter.
 Audit de code sur les deux axes suivants (avant & après modifications):
 
 ```
-cf. documentation
+cf. document "Courtot_Jean_3_rapport_audit_082022"
 ```
 
 ## Installation
@@ -119,34 +121,43 @@ composer database-test
 
 ### Lancer les tests
 
-phpstan : analyseur statique pour PHP (identifie les erreures sans avoir
-besoin d'exécuter le code).
+#### phpstan
+
+Analyseur statique pour PHP (identifie les erreures sans avoir besoin d'exécuter
+le code).
 
 ```
 vendor/bin/phpstan analyse -c phpstan.neon
 ```
 
-phpunit : permet de tester les tests de régression implémentés en vérifiant que
-les exécutions correspondent aux assertions prédéfinies.
+#### phpunit
+
+Permet de tester les tests de régression implémentés en vérifiant que les exécutions
+correspondent aux assertions prédéfinies.
 
 ```
 php bin/phpunit
 ```
 
-php code sniffer : détecte les violations définies par le standard PSR-12.
+#### php code sniffer
+
+Détecte les violations définies par le standard PSR-12.
 
 ```
 vendor/bin/phpcs --standard=PSR12 src
 ```
 
-php code standards fixer : corrige le code pour suivre les standards PSR.
+#### php code standards fixer
+
+Corrige le code pour suivre les standards PSR.
 
 ```
 tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
 ```
 
-php mess detector : scan le code source PHP à la recherche de potentiel erreures
-telles que :
+#### php mess detector
+
+Scan le code source PHP à la recherche de potentiel erreures telles que :
 
 -   de possibles bugs ;
 -   du code mort ;
@@ -155,4 +166,12 @@ telles que :
 
 ```
 vendor/bin/phpmd src text .phpmd.xml
+```
+
+#### PHPCPD
+
+Permet de détecter les codes dupliqués dans le projet
+
+```
+phpcpd src
 ```
