@@ -24,7 +24,7 @@ Le document regroupe les sections suivantes :
 
 Afin d’assurer une bonne collaboration sur le projet, il a été choisi d’utiliser la plateforme [Github](https://github.com/) pour **partager le code de l’application**.
 
-![Github main page](https://drive.google.com/file/d/18l4p7iu4ejt6AiL6q0ZgBK9KcEXHKAaO/view?usp=share_link)
+![Github main page](public/build/images/contributing/github_main_page.png)
 
 Plus précisément il s'agit d'un site web basé sur le cloud qui héberge des **dépôts Git**, qui sont des espaces de stockage pour les fichiers source, les documents et les données de configuration. Les développeurs peuvent télécharger et partager des fichiers, travailler sur des projets en collaboration, tester du code, signaler des problèmes et proposer des modifications à d'autres développeurs.
 
@@ -32,11 +32,11 @@ Les futures développeurs qui souhaitent apporter leur collaboration devront uti
 
 Pour cela il faut commencer par **récupérer le projet** dans son état actuel depuis github en faisant un **fork** puis un **clone**.
 
-![Fork Github](https://drive.google.com/file/d/1cGfR_1Wc97OGY7Mbc50UIANivwX1ZA-C/view?usp=share_link)
+![Fork Github](public/build/images/contributing/fork.png)
 
 Forker un projet signifie créer une copie sous son propre compte GitHub. Cela permet d'expérimenter librement et de apporter des modifications au projet sans affecter le projet original.
 
-![Clone du projet](https://drive.google.com/file/d/111Zj-12enM6XepZjoL05I-RkD6xgoaJi/view?usp=share_link)
+![Clone du projet](public/build/images/contributing/git_clone.png)
 
 Il reste ensuite à **suivre les directives** indiquées dans le [README](https://github.com/F-Jean/projet8-TodoList/blob/master/README.md) pour finaliser l’installation et avoir accès à une version locale sur laquelle on peut commencer les modifications.
 
@@ -48,7 +48,7 @@ Les issues sont un moyen de **signaler des problèmes, des bugs, des demandes de
 
 Note : Si vous avez fork un projet il ne vous sera pas possible d'écrire vos issues dans votre [repository](https://github.com/F-Jean/projet8-TodoList).
 
-![Github issues](https://drive.google.com/file/d/1TPYwEagEImux-h9BJCkU3FeXdq7nxzwq/view?usp=share_link)
+![Github issues](public/build/images/contributing/issue.png)
 
 Certaines dispositions à respecter s'imposent lors de l'écriture d'une issue :
 
@@ -85,7 +85,7 @@ Créer une **nouvelle branche** :
 git branch <branch-name>
 ```
 
-![Git branches](https://drive.google.com/file/d/1f-nrvuMV8kw4qbcTf6GKb7BiFl66jZ5m/view?usp=share_link)
+![Git branches](public/build/images/contributing/github_branches.png)
 
 Elle contiendra tout le code ajouté et on peut y réalisés des [commits](https://github.com/F-Jean/projet8-TodoList/commits/master) à chaque avancée mineure/majeure :
 
@@ -93,7 +93,7 @@ Elle contiendra tout le code ajouté et on peut y réalisés des [commits](https
 git commit -m  "message"
 ```
 
-![Git commits](https://drive.google.com/file/d/1zzShC-RzxWfY5Af9vQpxOx0QvkExshoQ/view?usp=share_link)
+![Git commits](public/build/images/contributing/git_commits.png)
 
 Les commits sont utilisés pour **enregistrer les modifications de code** effectuées dans un projet. Ils permettent entre autres :
 
@@ -113,7 +113,7 @@ git push origin <branch-name>
 
 Ceci ajoutera la nouvelle branche ainsi que tous ses commits, on peut alors faire une **pull request** (ou PR).
 
-![Github branches](https://drive.google.com/file/d/1GwmCmYjZs0eknsAB4E0Ze5URIMi9J3SV/view?usp=share_link)
+![Github branches](public/build/images/contributing/github_branches.png)
 
 Cependant, pensez **toujours à faire une dernière vérification des tests et analyses du code avant de push** (cf. section [Processus de qualité à utiliser et règles à respecter](#processus-de-qualité-à-utiliser-et-règles-à-respecter).
 
@@ -123,7 +123,7 @@ La PR est une demande de **vérification et de validation** de nos ajouts, afin 
 
 Il est aussi important d'être le plus **clair et précis possible** lors de la rédaction du titre et de la description.
 
-![Github PR](https://drive.google.com/file/d/135ijZk47dYgeH2Rj5NKm5ZjNraW1cxK8/view?usp=share_link)
+![Github PR](public/build/images/contributing/PR.png)
 
 ### Et ensuite
 
@@ -156,11 +156,11 @@ vendor/bin/phpcs --standard=PSR12 src
 
 Voici plusieurs raisons d’utiliser cet outil :
 
--   **Standardisation du code** : permet d'appliquer des standards de codage pour uniformiser le style de code dans un projet. Les développeurs peuvent définir les standards de codage à appliquer en fonction de leurs besoins spécifiques.
+    -   **Standardisation du code** : permet d'appliquer des standards de codage pour uniformiser le style de code dans un projet. Les développeurs peuvent définir les standards de codage à appliquer en fonction de leurs besoins spécifiques.
 
--   **Détection des erreurs de code** : permet de détecter les erreurs de codage dans un projet, telles que les erreurs de syntaxe, les problèmes de formatage et de style de code, les problèmes de sécurité et de performances, etc.
+    -   **Détection des erreurs de code** : permet de détecter les erreurs de codage dans un projet, telles que les erreurs de syntaxe, les problèmes de formatage et de style de code, les problèmes de sécurité et de performances, etc.
 
--   **Optimisation de la qualité de code** : permet d'améliorer la qualité de code en détectant et en corrigeant les problèmes de code dès le début du processus de développement. Cela peut éviter des erreurs coûteuses et faciliter la maintenance du code à long terme.
+    -   **Optimisation de la qualité de code** : permet d'améliorer la qualité de code en détectant et en corrigeant les problèmes de code dès le début du processus de développement. Cela peut éviter des erreurs coûteuses et faciliter la maintenance du code à long terme.
 
 -   PHP Coding standards fixer : outil qui permet d'appliquer des standards de codage à un projet PHP. Il peut être utilisé pour détecter et corriger automatiquement les problèmes de formatage et de style de code, tels que l'indentation, les espaces, les retours à la ligne, la casse, les commentaires, etc.
 
@@ -172,11 +172,11 @@ tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
 
 Voici plusieurs raisons d’utiliser cet outil :
 
--   **Uniformisation du code** : permet de normaliser le style de code dans un projet en appliquant les standards de codage définis par la communauté PHP ou personnalisés par l'utilisateur.
+    -   **Uniformisation du code** : permet de normaliser le style de code dans un projet en appliquant les standards de codage définis par la communauté PHP ou personnalisés par l'utilisateur.
 
--   **Économie de temps** : permet de gagner du temps en détectant et en corrigeant automatiquement les problèmes de formatage et de style de code, ce qui peut éviter des erreurs humaines et des corrections manuelles fastidieuses.
+    -   **Économie de temps** : permet de gagner du temps en détectant et en corrigeant automatiquement les problèmes de formatage et de style de code, ce qui peut éviter des erreurs humaines et des corrections manuelles fastidieuses.
 
--   **Cohérence du code** : permet de maintenir la cohérence du code dans un projet, ce qui facilite la compréhension et la maintenance du code par l'équipe de développement.
+    -   **Cohérence du code** : permet de maintenir la cohérence du code dans un projet, ce qui facilite la compréhension et la maintenance du code par l'équipe de développement.
 
 Notes :
 
