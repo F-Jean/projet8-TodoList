@@ -13,8 +13,16 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use App\Service\HandleTaskInterface;
 
+/**
+ * TaskController class
+ */
 class TaskController extends AbstractController
 {
+    /**
+     * TaskController constructor
+     *
+     * @param TaskRepository $taskRepository
+     */
     public function __construct(
         private TaskRepository $taskRepository
     ) {
@@ -23,7 +31,7 @@ class TaskController extends AbstractController
     #[Route('/tasks/todo', name: 'task_list_todo')]
     public function listAction(Request $request): Response
     {
-        // On va chercher le numéro de la page dans l'url
+        // On va chercher le numéro de la page dans l'url.
         $page = $request->query->getInt('page', 1);
 
         return $this->render('task/list.html.twig', [
@@ -34,7 +42,7 @@ class TaskController extends AbstractController
     #[Route('/tasks/done', name: 'task_list_done')]
     public function listTaskDoneAction(Request $request): Response
     {
-        // On va chercher le numéro de la page dans l'url
+        // On va chercher le numéro de la page dans l'url.
         $page = $request->query->getInt('page', 1);
 
         return $this->render('task/list.html.twig', [
@@ -68,7 +76,7 @@ class TaskController extends AbstractController
             return $this->redirectToRoute('task_list_todo');
         }
 
-        return $this->renderForm(
+        return $this->render(
             'task/create.html.twig',
             ['form' => $form]
         );
@@ -80,7 +88,7 @@ class TaskController extends AbstractController
         Request $request,
         HandleTaskInterface $handleTask
     ): Response {
-        // check for "authorize" access: calls all voters
+        // Check for "authorize" access: calls all voters.
         $this->denyAccessUnlessGranted('authorize', $task);
 
         $form = $this->createForm(
@@ -113,7 +121,7 @@ class TaskController extends AbstractController
         Task $task,
         HandleTaskInterface $handleTask,
     ): RedirectResponse {
-        // check for "authorize" access: calls all voters
+        // Check for "authorize" access: calls all voters.
         $this->denyAccessUnlessGranted('authorize', $task);
 
         $handleTask->toggleTask($task);

@@ -7,13 +7,20 @@ use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-
+/**
+ * UserFixtures class
+ */
 class UserFixtures extends Fixture
 {
     public const USER_ADMIN = "Audrey";
     public const USER_TEST_1 = "Morgane";
     public const USER_TEST_2 = "Clement";
 
+    /**
+     * UserFixtures constructor
+     *
+     * @param UserPasswordHasherInterface $passwordHasher
+     */
     public function __construct(private UserPasswordHasherInterface $passwordHasher)
     {
     }
@@ -24,12 +31,12 @@ class UserFixtures extends Fixture
      */
     private function createUsers(ObjectManager $manager): array
     {
-        // création de plusieurs users pour tester l'authentification et les fonctionnalités
+        // Création de plusieurs users pour tester l'authentification et les fonctionnalités.
         $users =
             [
-                // donne le role ROLE_ADMIN (pour avoir accès aux infos user)
+                // Donne le role ROLE_ADMIN (pour avoir accès aux infos user)
                 'Jean' => (new User())->setUsername('Jean')->setEmail('jean@sf.com')->setRole('ROLE_ADMIN'),
-                // donne le role ROLE_USER
+                // Donne le role ROLE_USER
                 'Loic' => (new User())->setUsername('Loic')->setEmail('loic@sf.com'),
                 'Antoine' => (new User())->setUsername('Antoine')->setEmail('antoine@sf.com'),
                 'Claire' => (new User())->setUsername('Claire')->setEmail('claire@sf.com'),
@@ -55,21 +62,21 @@ class UserFixtures extends Fixture
      */
     public function load(ObjectManager $manager): void
     {
-        // ajout de 3 users utilisés dans TaskFixtures pour les tests
-        $userAdmin = new User;
+        // Ajout de 3 users utilisés dans TaskFixtures pour les tests.
+        $userAdmin = new User();
         $userAdmin->setUsername('Audrey')
             ->setEmail('audrey@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userAdmin, 'passworD1!'))
             ->setRole('ROLE_ADMIN');
         $manager->persist($userAdmin);
 
-        $userTest1 = new User;
+        $userTest1 = new User();
         $userTest1->setUsername('Morgane')
             ->setEmail('morgane@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userTest1, 'passworD1!'));
         $manager->persist($userTest1);
 
-        $userTest2 = new User;
+        $userTest2 = new User();
         $userTest2->setUsername('Clement')
             ->setEmail('clement@sf.com')
             ->setPassword($this->passwordHasher->hashPassword($userTest2, 'passworD1!'));
