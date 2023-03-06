@@ -195,7 +195,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function EditedTaskShouldBeDisplayed(): void
+    public function editedTaskShouldBeDisplayed(): void
     {
         $client = static::createClient();
 

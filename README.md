@@ -1,3 +1,5 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3722681d50c4405784bf78cf83c7585a)](https://www.codacy.com/gh/F-Jean/projet8-TodoList/dashboard?utm_source=github.com&utm_medium=referral&utm_content=F-Jean/projet8-TodoList&utm_campaign=Badge_Grade)
+
 # ToDoList
 
 ==========
@@ -63,12 +65,19 @@ cf. document "Courtot_Jean_3_rapport_audit_082022"
 
 ## Installation
 
-Cloner le repository :
+**Récupérer le projet** dans son état actuel depuis github en faisant un **fork**.
+Cela va créer une copie sous votre propre compte GitHub. Cela permet d'expérimenter librement et d'apporter des modifications au projet sans affecter le projet original.
+
+Placez-vous dans le dossier dans lequel vous voulez cloner le repository.
+
+Cloner le repository (Copier bien celui de votre repository avec VOTRE username Github):
 
 ```
-https://github.com/F-Jean/projet8-TodoList.git
+git clone https://github.com/VOTREUSERNAMEGITHUB/projet8-TodoList.git
 cd projet8-TodoList
 ```
+
+Ouvrer le dans votre éditeur.
 
 Mettre à jour les dépendances :
 
@@ -78,7 +87,7 @@ composer update
 
 ## Configuration
 
-Créer un fichier `.env.local` :
+Créer un fichier `.env.local` (Remplacer root & password par **VOS identifiants**):
 
 ```
 DATABASE_URL=mysql://root:password@127.0.0.1/todolist_v1
@@ -102,6 +111,13 @@ php bin/console doctrine:fixtures:load
 ```
 symfony serve -d
 https://127.0.0.1:8000
+```
+
+Pour que webpack encore fonctionne correctement (créations des node_modules + public/build) :
+
+```
+npm install
+npm run watch
 ```
 
 ## Environnement de test

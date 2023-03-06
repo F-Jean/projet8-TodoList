@@ -34,7 +34,7 @@ Pour cela il faut commencer par **récupérer le projet** dans son état actuel 
 
 ![Fork Github](assets/images/contributing/fork.png)
 
-Forker un projet signifie créer une copie sous son propre compte GitHub. Cela permet d'expérimenter librement et de apporter des modifications au projet sans affecter le projet original.
+Forker un projet signifie créer une copie sous son propre compte GitHub. Cela permet d'expérimenter librement et d'apporter des modifications au projet sans affecter le projet original.
 
 ![Clone du projet](assets/images/contributing/git_clone.png)
 
