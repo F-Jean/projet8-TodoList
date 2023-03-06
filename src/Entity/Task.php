@@ -33,7 +33,8 @@ class Task
     #[ORM\Column(type: 'boolean')]
     private bool $isDone;
 
-    #[ORM\ManyToOne]
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(onDelete: 'SET NULL')]
     private ?User $user = null;
 
     /**

@@ -14,7 +14,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function existant_user_should_be_edited_by_admin(): void
+    public function existantUserShouldBeEditedByAdmin(): void
     {
         $client = static::createClient();
 
@@ -56,7 +56,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function existant_user_should_not_be_edited_by_admin_due_to_blank_username_and_raise_form_error(): void
+    public function existantUserShouldNotBeEditedByAdminDueToBlankUsernameAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -90,7 +90,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function existant_user_should_not_be_edited_by_admin_due_to_blank_password(): void
+    public function existantUserShouldNotBeEditedByAdminDueToBlankPassword(): void
     {
         $client = static::createClient();
 
@@ -124,7 +124,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function existant_user_should_not_be_edited_by_admin_due_to_blank_email(): void
+    public function existantUserShouldNotBeEditedByAdminDueToBlankEmail(): void
     {
         $client = static::createClient();
 

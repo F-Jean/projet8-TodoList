@@ -15,7 +15,7 @@ class CreateTest extends WebTestCase
     /**
      * @test
      */
-    public function added_task_should_be_displayed_and_redirect_to_tasks_list(): void
+    public function addedTaskShouldBeDisplayedAndRedirectToTasksList(): void
     {
         $client = static::createClient();
 
@@ -44,13 +44,13 @@ class CreateTest extends WebTestCase
         $this->assertResponseStatusCodeSame(Response::HTTP_FOUND);
         $client->followRedirect();
 
-        $this->assertSelectorTextContains('html', 'new task');
+        $this->assertSelectorTextContains('html', 'Superbe ! La tâche a été bien été ajoutée.');
     }
 
     /**
      * @test
      */
-    public function task_should_not_be_registered_due_to_blank_title_and_raise_form_error(): void
+    public function taskShouldNotBeRegisteredDueToBlankTitleAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -85,7 +85,7 @@ class CreateTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_registered_due_to_blank_description_and_raise_form_error(): void
+    public function taskShouldNotBeRegisteredDueToBlankDescriptionAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -120,7 +120,7 @@ class CreateTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_registered_due_to_existed_title_and_raise_form_error(): void
+    public function taskShouldNotBeRegisteredDueToExistedTitleAndRaiseFormError(): void
     {
         $client = static::createClient();
 

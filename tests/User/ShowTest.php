@@ -14,7 +14,7 @@ class ShowTest extends WebTestCase
     /**
      * @test
      */
-    public function users_management_should_be_displayed_for_admin(): void
+    public function usersManagementShouldBeDisplayedForAdmin(): void
     {
         $client = static::createClient();
 
@@ -40,7 +40,7 @@ class ShowTest extends WebTestCase
     /**
      * @test
      */
-    public function users_management_should_not_be_displayed_for_non_admin(): void
+    public function usersManagementShouldNotBeDisplayedForNonAdmin(): void
     {
         $client = static::createClient();
 

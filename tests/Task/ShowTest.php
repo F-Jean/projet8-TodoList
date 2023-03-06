@@ -14,7 +14,7 @@ class ShowTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_be_displayed(): void
+    public function taskShouldBeDisplayed(): void
     {
         $client = static::createClient();
 
@@ -32,10 +32,11 @@ class ShowTest extends WebTestCase
 
         $crawler = $client->request(
             Request::METHOD_GET,
-            $urlGenerator->generate("task_list")
+            $urlGenerator->generate("task_list_todo")
         );
 
         $this->assertResponseStatusCodeSame(Response::HTTP_OK);
-        $this->assertCount(23, $crawler->filter('.thumbnail'));
+        /* On test l'affichage des 9 tasks max par page due à la pagination */
+        $this->assertCount(9, $crawler->filter('.card'));
     }
 }

@@ -15,7 +15,7 @@ class ToggleTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_toggled_by_author(): void
+    public function taskShouldToggledByAuthor(): void
     {
         // création du client
         $client = static::createClient();
@@ -52,7 +52,7 @@ class ToggleTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_toggle_by_other_user_and_raise_message_error(): void
+    public function taskShouldNotBeToggleByOtherUserAndRaiseMessageError(): void
     {
         $client = static::createClient();
 
@@ -77,7 +77,7 @@ class ToggleTest extends WebTestCase
     /**
      * @test
      */
-    public function user_task_should_be_toggle_by_admin(): void
+    public function userTaskShouldBeToggleByAdmin(): void
     {
         $client = static::createClient();
 
@@ -111,7 +111,7 @@ class ToggleTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_should_be_toggle_by_admin_only(): void
+    public function anonymeTaskShouldBeToggleByAdminOnly(): void
     {
         $client = static::createClient();
 
@@ -145,7 +145,7 @@ class ToggleTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_should_not_be_toggle_by_non_admin(): void
+    public function anonymeTaskShouldNotBeToggleByNonAdmin(): void
     {
         $client = static::createClient();
 

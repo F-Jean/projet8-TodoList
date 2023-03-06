@@ -15,7 +15,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_be_edited_by_author_and_redirect_to_tasks_list(): void
+    public function taskShouldBeEditedByAuthorAndRedirectToTasksList(): void
     {
         $client = static::createClient();
 
@@ -57,7 +57,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function edit_task_should_not_be_available_to_other_user_and_raise_message_error(): void
+    public function editTaskShouldNotBeAvailableToOtherUserAndRaiseMessageError(): void
     {
         $client = static::createClient();
 
@@ -82,7 +82,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function user_task_can_be_update_by_admin(): void
+    public function userTaskCanBeUpdateByAdmin(): void
     {
         $client = static::createClient();
 
@@ -126,7 +126,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_can_be_update_by_admin_only(): void
+    public function anonymeTaskCanBeUpdatedByAdminOnly(): void
     {
         $client = static::createClient();
 
@@ -170,7 +170,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_can_not_be_available_by_non_admin_and_raise_message_error(): void
+    public function anonymeTaskCanNotBeAvailableByNonAdminAndRaiseMessageError(): void
     {
         $client = static::createClient();
 
@@ -195,7 +195,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function edited_task_should_be_displayed(): void
+    public function EditedTaskShouldBeDisplayed(): void
     {
         $client = static::createClient();
 
@@ -223,7 +223,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_edited_due_to_blank_title_and_raise_form_error(): void
+    public function taskShouldNotBeEditedDueToBlankTitleAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -258,7 +258,7 @@ class UpdateTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_edited_due_to_blank_content_and_raise_form_error(): void
+    public function taskShouldNotBeEditedDueToBlankContentAndRaiseFormError(): void
     {
         $client = static::createClient();
 

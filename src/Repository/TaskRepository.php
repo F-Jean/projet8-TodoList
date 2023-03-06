@@ -82,11 +82,6 @@ class TaskRepository extends ServiceEntityRepository
         // On va chercher les données.
         $data = $paginator->getQuery()->getResult();
 
-        // On vérifie qu'on a des données.
-        if (empty($data)) {
-            return $result;
-        }
-
         // On calcule le nombre de pages.
         $pages = ceil($paginator->count() / $length);
 

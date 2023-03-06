@@ -6,13 +6,12 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
 class LoginTest extends WebTestCase
 {
     /**
      * @test
      */
-    public function user_should_be_authenticated_and_redirect_to_homepage(): void
+    public function userShouldBeAuthenticatedAndRedirectToHomepage(): void
     {
         // Simule l'envoie d'une requête HTTP.
         $client = static::createClient();
@@ -40,7 +39,7 @@ class LoginTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_authenticated_due_to_invalid_credentials_and_raise_form_error(): void
+    public function userShouldNotBeAuthenticatedDueToInvalidCredentialsAndRaiseFormError(): void
     {
         $client = static::createClient();
         $crawler = $client->request(Request::METHOD_GET, '/login');
@@ -61,7 +60,7 @@ class LoginTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_authenticated_due_to_blank_username_raise_form_error_and_redirect_to_login(): void
+    public function userShouldNotBeAuthenticatedDueToBlankUsernameRaiseFormErrorAndRedirectToLogin(): void
     {
         $client = static::createClient();
         $crawler = $client->request(Request::METHOD_GET, '/login');
@@ -82,7 +81,7 @@ class LoginTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_authenticated_due_to_blank_password_raise_form_error_and_redirect_to_login(): void
+    public function userShouldNotBeAuthenticatedDueToBlankPasswordRaiseFormErrorAndRedirectToLogin(): void
     {
         $client = static::createClient();
         $crawler = $client->request(Request::METHOD_GET, '/login');

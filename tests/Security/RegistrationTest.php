@@ -14,7 +14,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_be_registered_and_redirect_to_users_list(): void
+    public function userShouldBeRegisteredAndRedirectToUsersList(): void
     {
         $client = static::createClient();
 
@@ -50,7 +50,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_registration_should_not_be_displayed_for_non_admin(): void
+    public function userRegistrationShouldNotBeDisplayedForNonAdmin(): void
     {
         $client = static::createClient();
 
@@ -76,7 +76,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_blank_username_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToBlankUsernameAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -110,7 +110,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_used_username_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToUsedUsernameAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -144,7 +144,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_invalid_password_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToInvalidPasswordAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -178,7 +178,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_blank_password_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToBlankPasswordAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -212,7 +212,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_invalid_email_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToInvalidEmailAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -246,7 +246,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_blank_email_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToBlankEmailAndRaiseFormError(): void
     {
         $client = static::createClient();
 
@@ -280,7 +280,7 @@ class RegistrationTest extends WebTestCase
     /**
      * @test
      */
-    public function user_should_not_be_registered_due_to_used_email_and_raise_form_error(): void
+    public function userShouldNotBeRegisteredDueToUsedEmailAndRaiseFormError(): void
     {
         $client = static::createClient();
 

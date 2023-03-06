@@ -15,7 +15,7 @@ class DeleteTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_be_deleted_by_author_and_redirect_to_tasks_list(): void
+    public function taskShouldBeDeletedByAuthorAndRedirectToTasksList(): void
     {
         $client = static::createClient();
 
@@ -49,7 +49,7 @@ class DeleteTest extends WebTestCase
     /**
      * @test
      */
-    public function task_should_not_be_deleted_by_other_user_and_raise_message_error(): void
+    public function taskShouldNotBeDeletedByOtherUserAndRaiseMessageError(): void
     {
         $client = static::createClient();
 
@@ -74,7 +74,7 @@ class DeleteTest extends WebTestCase
     /**
      * @test
      */
-    public function user_task_should_be_deleted_by_admin(): void
+    public function userTaskShouldBeDeletedByAdmin(): void
     {
         $client = static::createClient();
 
@@ -109,7 +109,7 @@ class DeleteTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_should_be_deleted_by_admin(): void
+    public function anonymeTaskShouldBeDeletedByAdmin(): void
     {
         $client = static::createClient();
 
@@ -144,7 +144,7 @@ class DeleteTest extends WebTestCase
     /**
      * @test
      */
-    public function anonyme_task_should_not_be_deleted_by_non_admin(): void
+    public function anonymeTaskShouldNotBeDeletedByNonAdmin(): void
     {
         $client = static::createClient();
 
