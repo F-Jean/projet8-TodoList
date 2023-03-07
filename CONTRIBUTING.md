@@ -20,7 +20,7 @@ Le document regroupe les sections suivantes :
 -   [Performances](#performances)
     -   [Problématique performance VS lisibilité/compréhension du code](#problématique-performance-vs-lisibilitécompréhension-du-code)
 
-## Introduction aux procédure pour les développeurs souhaitant apporter des modifications au projet
+## Introduction aux procédures pour les développeurs souhaitant apporter des modifications au projet
 
 Afin d’assurer une bonne collaboration sur le projet, il a été choisi d’utiliser la plateforme [Github](https://github.com/) pour **partager le code de l’application**.
 
@@ -28,7 +28,7 @@ Afin d’assurer une bonne collaboration sur le projet, il a été choisi d’ut
 
 Plus précisément il s'agit d'un site web basé sur le cloud qui héberge des **dépôts Git**, qui sont des espaces de stockage pour les fichiers source, les documents et les données de configuration. Les développeurs peuvent télécharger et partager des fichiers, travailler sur des projets en collaboration, tester du code, signaler des problèmes et proposer des modifications à d'autres développeurs.
 
-Les futures développeurs qui souhaitent apporter leur collaboration devront utilisr ces outils en respectant **les différentes procédures** nécessaires pour **partager correctement leur code**.
+Les futures développeurs qui souhaitent apporter leur collaboration devront utiliser ces outils en respectant **les différentes procédures** nécessaires pour **partager correctement leur code**.
 
 Pour cela il faut commencer par **récupérer le projet** dans son état actuel depuis github en faisant un **fork** puis un **clone**.
 
@@ -52,10 +52,10 @@ Note : Si vous avez fork un projet il ne vous sera pas possible d'écrire vos is
 
 Certaines dispositions à respecter s'imposent lors de l'écriture d'une issue :
 
--   ne pas hésiter à bien détaillé, inclure des captures d'écran et/ou des exemples de code, etc ;
+-   ne pas hésiter à bien détailler, à inclure des captures d'écran et/ou des exemples de code, etc ;
 -   classifier selon les étiquettes (labels) disponibles pour la rendre facilement identifiable ;
 -   commenter pour donner leur avis, poser des questions ou proposer des solutions ET SURTOUT **faire preuve de respect et de politesse** ;
--   ne pas relancer tant que/si l'issue n'a pas été validée.
+-   ne pas relancer tant que/si l'issue n'a pas été validé.
 
 ### Rapport de bug
 
@@ -87,7 +87,7 @@ git branch <branch-name>
 
 ![Git branches](assets/images/contributing/github_branches.png)
 
-Elle contiendra tout le code ajouté et on peut y réalisés des [commits](https://github.com/F-Jean/projet8-TodoList/commits/master) à chaque avancée mineure/majeure :
+Elle contiendra tout le code ajouté et on peut y réaliser des [commits](https://github.com/F-Jean/projet8-TodoList/commits/master) à chaque avancée mineure/majeure :
 
 ```
 git commit -m  "message"
@@ -101,7 +101,7 @@ Les commits sont utilisés pour **enregistrer les modifications de code** effect
 
 -   la **réversibilité** : Ils permettent également de revenir en arrière dans l'historique des modifications et de restaurer une version précédente du code si nécessaire. Cela peut être très utile en cas de problèmes ou de bugs, car les commits peuvent être annulés sans affecter les autres parties du code.
 
-Il est important que les **commits contiennent des avancées liées à la fonctionnalité développé** afin de garder un code cohérent.
+Il est important que les **commits contiennent des avancées liées à la fonctionnalité développée** afin de garder un code cohérent.
 
 ### Tests
 
@@ -197,9 +197,9 @@ phpcpd src
 
 ## Tests mis en place
 
-En plus de l'utilisation des ces outils il est demander de rédiger des tests lors de l'ajout d'une nouvelle fonctionnalité pour plusieurs raisons :
+En plus de l'utilisation de ces outils il est demandé de rédiger des tests lors de l'ajout d'une nouvelle fonctionnalité pour plusieurs raisons :
 
-1. Vérifier le bon fonctionnement de la nouvelle fonctionnalité : Les tests permettent de s'assurer que la nouvelle fonctionnalité a été implémentée correctement et que le comportement de l'application n'a pas été altéré.
+1. Vérifier le bon fonctionnement de la nouvelle fonctionnalité : Les tests permettent de s'assurer que la nouvelle fonctionnalité a été implémenté correctement et que le comportement de l'application n'a pas été altéré.
 2. Faciliter la maintenance : Les tests servent également à garantir que les fonctionnalités existantes ne sont pas affectées par les modifications apportées. Cela facilite la maintenance de l'application à long terme.
 3. Réduire les risques de régression : Les tests automatisés réduisent les risques de régression en signalant les erreurs dès qu'elles se produisent. Cela permet de détecter les problèmes avant qu'ils ne soient trop importants et plus difficiles à corriger.
 
@@ -207,15 +207,15 @@ En plus de l'utilisation des ces outils il est demander de rédiger des tests lo
 
 On souhaite ajouter la fonctionnalité de création d'une tâche à notre projet. On va donc créer le fichier [CreateTest.php](https://github.com/F-Jean/projet8-TodoList/blob/master/tests/Task/CreateTest.php) dans un dossier Task qui contiendra tout les tests liés à cette nouvelle fonctionnalité.
 
-On sait qu'une tâche devra avoir un titre et une description, et qu'elle devra être afficher sur la page de liste des tâches.
-On écrit un test pour chacun des cas, on test :
+On sait qu'une tâche devra avoir un titre et une description, et qu'elle devra être affichée sur la page de liste des tâches.
+On écrit un test pour chacun des cas, on teste :
 
--   la soumission et l'affichage d'une tâche correctement renseigné ;
+-   la soumission et l'affichage d'une tâche correctement renseignée ;
 -   puis la soumission d'une tâche avec un titre non conforme et l'affichage d'un message d'erreur ;
--   un test pour une description non conforme eet l'affichage d'un message d'erreur;
+-   un test pour une description non conforme et l'affichage d'un message d'erreur;
 -   un test pour un titre déjà existant et l'affichage d'un message d'erreur.
 
-Une fois les tests écrit, on développe la fonctionnalité. On se sert des outils de vérification de qualité du code vu précédemment puis on relance les tests jusqu'à qu'ils soient tous correct.
+Une fois les tests écrits, on développe la fonctionnalité. On se sert des outils de vérification de qualité du code vu précédemment puis on relance les tests jusqu'à qu'ils soient tous correct.
 
 ## Performances
 
@@ -235,7 +235,7 @@ C’est important car il faut comprendre qu’une fonction n’est pas forcémen
 
 ### Problématique performance VS lisibilité/compréhension du code
 
-Si vous en venez à vous posez la question sur certaines parties de votre code, voici une approche possible de la situation. A part si le gain de performance et vraiment très signifiant toujours préférer la compréhension du code.
+Si vous en venez à vous poser la question sur certaines parties de votre code, voici une approche possible de la situation. A part si le gain de performance et vraiment très signifiant toujours préférer la compréhension du code.
 
-Le projet est collaboratif et pour que l'application continue de fonctionner dans le temps, version après version, il est essentiel de faciliter sa maintenance à long terme. Il est donc important que les autres personnes qui travaillent sur le projet comprennent ce qui a été fait sous peine de les démoraliser et de les voirs abandonner.
+Le projet est collaboratif et pour que l'application continue de fonctionner dans le temps, version après version, il est essentiel de faciliter sa maintenance à long terme. Il est donc important que les autres personnes qui travaillent sur le projet comprennent ce qui a été fait sous peine de les démoraliser et de les voir abandonner.
 On préfèrera une application "plus lente" mais fonctionnelle, qu'une application "très rapide" qu'on ne peut pas faire évoluée.
